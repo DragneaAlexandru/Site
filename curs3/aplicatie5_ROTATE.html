@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style type="text/css">
+   
+.container{
+width: 379px;     height: 419px;     perspective: 300px;  	border: 4px solid #a2b058;
+    background: #f0f5d8;	margin: 50px;
+}
+.transformed {
+    -webkit-transform: rotate3d(0, 1, 0, 20deg); /* Chrome, Safari, Opera */
+    transform: rotate3d(40deg, 1, 0, 0); /* Standard syntax */
+}
+
+</style>
+</head>
+<body>
+    <h2>Before Rotation:</h2>
+    <div class="container">
+      	<img src="figura.png" >
+    </div>
+    <h2>After Rotation:</h2>
+  	<div class="container">
+        <img src="figura.png" class="transformed" >
+    </div>
+</body>
+</html>      

@@ -1,0 +1,49 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> 
+<title>jQuery draggable </title> 
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"> 
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script> 
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+<link rel="stylesheet" href="/resources/demos/style.css"> 
+<style> 
+#dr
+{ 
+width: 150px; 
+height: 150px; 
+padding: 1.5em; 
+} 
+
+body {
+  background-color: #6666ff; 
+}
+
+#d1
+{ 
+ background-color: yellow;
+ width: 150px; 
+ height: 150px; 
+} 
+</style> 
+
+<script> 
+$(function() { 
+$( "#dr,h1,#d1").draggable(); 
+}); 
+</script> 
+
+</head> 
+
+<body> 
+<div id="dr" class="ui-widget-content"> 
+<p>Text pentru drag...</p> 
+</div> 
+<h1>Student</h1> 
+
+<div id="d1">
+</div>
+
+</body> 
+
+</html>

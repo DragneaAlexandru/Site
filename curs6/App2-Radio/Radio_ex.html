@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Calculator </title>
+		<link rel = "stylesheet" href = "style/style.css" type = "text/css">
+		<script src="functii.js"/></script>
+	</head>
+	
+	<body>
+		<form name = "f">
+			<input type="text" name = "t1" onclick="f3(t1,t3)"/>
+			<input type="button" name = "b1" value = "?"/>
+			<input type="text" name = "t2" onclick="f3(t2,t3)"/>
+			<input type="button" name = "b2" value = "=" onclick="f2(r,t1,t2,t3)"/>
+			<input type="text" name = "t3" readonly />
+			<br/>
+			<br/>
+			<button type="reset">STERGE</button>
+			<br/>
+			<br/>
+			<label for="Imput">Alegeti operatia:</label>
+			 <select name="r" id="op" onclick ="f1(r,b1)">
+			   <option value="+">Suma </option>
+			   <option value="-">Scadere </option>
+			   <option value="*">Produs </option>
+			   <option value="/">Impartire </option>
+		  	   <option value="^">La puterea </option>
+		</form>
+		
+	</body>
+</html>

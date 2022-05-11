@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>Aplicatie</title>
+		<link rel = "stylesheet" href = "style/style.css" type = "text/css">
+		<script type=text/javascript>
+			function functie()
+			{
+			//preluare date intrare
+			//nume, n1,n2,n3 de tip string
+			
+			nume = f.nume.value;
+			x1=f.n1.value;//x1 este de tip string
+			x1=parseInt(x1);
+			x2=parseInt(f.n2.value);
+			x3=parseInt(f.n3.value);
+			//prelucrare			
+			max = x1;
+			if (max < x2)
+			{
+					max = x2;
+			}
+			if (max < x3)
+			{
+					max = x3;
+			}
+			//max contine element maxim
+			min = x1;
+			if (min > x2)
+			{
+					min = x2;
+			}
+			if (min > x3)
+			{
+					min = x3;
+			}
+			//afisare
+			
+			nume = nume.toUpperCase();
+			max = "Domnule " + nume +", aveti nota maxima este " + max;
+			//atribuire continut
+			f.max_nr.value = max;
+			min = "Domnule " + nume +", aveti nota maxima este " + min;
+			f.min_nr.value = min;
+			}
+		function sterge(x,y,z)
+		{
+		x.value = "";
+		y.value = "";
+		z.value = "";
+		}
+		</script>
+	</head>
+	<body>
+
+		<form name = "f" method = "get"/>
+		
+<input type = "text" name = "nume" size = "10" /> <br />
+NR. 1: 
+<input type = "text" name = "n1" size = "10"  /><br />
+NR. 2 
+<input type = "text" name = "n2" size = "10" onclick ="sterge(n2,max_nr,min_nr);" /><br />
+NR. 3<input type = "text" name = "n3" size = "10" onclick ="sterge(n3,max_nr,min_nr);"/><br />
+Maxim numere: <input type = "text" name = "max_nr" size = "50" readonly /><br />
+Minim numere
+<input type = "text" name = "min_nr" size = "50" readonly />
+<br />
+<input type="button" value="maxim si minim numere" onclick="functie()"/>	<br />	
+			
+<input type = "reset"/>
+	
+		</form>
+	</body>
+</html>

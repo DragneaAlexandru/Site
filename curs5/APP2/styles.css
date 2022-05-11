@@ -1,0 +1,32 @@
+body, html {
+  background-image: url("https://cdn.pixabay.com/photo/2014/12/27/16/38/planet-581239_960_720.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  height: 100%;
+}
+
+h1 {
+	background-color: black;
+   color: white;
+	
+}
+tr {
+	background-color: black;
+  color: white;
+	
+}
+td {
+	background-color: black;
+    color: white;
+	text-align: justify;
+	text-decoration-line: underline;
+    text-decoration-style: solid;
+	
+}
+ceasulmeu{ 
+     font-family:cursive;
+     font-size:100px;
+               
+           }

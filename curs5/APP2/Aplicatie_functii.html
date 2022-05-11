@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>		
+	 <title> Utilizare functii - fisiere externe </title>
+	 <link rel = "stylesheet" href = "styles.css" type = "text/css">
+	 <meta charset="UTF-8">
+	  <script type="text/javascript" src="functii.js">
+	  </script>
+	</head>
+	
+		<body>
+		 <table border="1" align="center">
+		  <tr>
+		   <td colspan="3" align="center">Salut UTM!</td>
+		  </tr>
+		   <td width="200"><br />
+		 <table width="100%" align="center"  border="0" cellpadding="0" cellspacing="0" valign="middle" >
+          <tr valign="middle" >
+           <td align="center" valign="middle">
+				TIME:
+            <p id="ceasulmeu"></p>
+           </td>
+          <tr/>
+         </table>
+		<script>
+            function ceas()
+            {
+                var x=new Date();
+                var ora=x.getHours();
+                var minute=x.getMinutes();
+                var secunde=x.getSeconds();
+                var total=valoareadev(ora)+":"+valoareadev(minute)+":"+valoareadev(secunde);
+                
+                var afisare=document.getElementById("ceasulmeu");
+                afisare.innerHTML=total;  
+               
+                
+            }
+            
+            function valoareadev(y)
+            {
+               
+                if(y.toString().length==1)
+                return "0"+y;
+                else return y;
+            }
+            
+            setInterval("ceas()",500);
+            
+        </script>
+		
+		 </td>
+		 <td width="600"><br /></td>
+		 <td width="200">
+		 
+		<script>
+		  scrie();
+	    </script>
+		
+		<p>Date/Time: <span id="datetime"></span></p>
+         <script>
+            var dt = new Date();
+              document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+         </script>
+		
+		 </td>
+		  <tr>
+		    <td colspan="3" align="center">
+			<form name="f" method="post">
+              Nume cumparator =<input type="text" id="n" name="nume" onclick="sterge(nume)" /><br />
+              Cantitate =<input type="text" id="c1" name="cant" onclick="sterge_plus(cant,valoare)" /><br />
+              Pret =<input type="text" id="p1" name="pret" onclick="sterge_plus(pret,valoare)" /><br />
+              Valoare =<input type="text" id="v" name="valoare" onclick="sterge(numar)" size="80" readonly /><br />
+               <button type="button" id="calcul" onclick="Calcul()">Calcul</button>
+               <button type="reset">STERGE</button>
+            </form>
+			</td>
+		<script>
+        function Calcul(){
+            //preluare date din formular dupa ID
+            var nume_c= document.getElementById("n").value;
+            var cantitate = parseInt(document.getElementById("c1").value);
+            var pret_p = parseInt(document.getElementById("p1").value);
+            // calcul
+            var valoare_f=cantitate*pret_p;
+            var mesaj="Domnul "+nume_c.toUpperCase()+" ati cumparat produse in valoare de "+valoare_f+ "lei";
+
+            //afisare rezultat
+           f.valoare.value = mesaj;
+        }
+		function sterge(x)
+		{
+		x.value="";
+		}
+        function sterge_plus(x,y)
+		{
+		x.value="";
+        y.value="";
+		}
+    </script>
+	
+		  </tr>
+	     </table>
+        </body>
+		
+</html>

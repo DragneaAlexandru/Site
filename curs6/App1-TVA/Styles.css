@@ -1,0 +1,32 @@
+body, html {
+  background-image: url("https://cdn.pixabay.com/photo/2015/05/23/22/16/orange-781119_960_720.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  height: 100%;
+}
+
+h1 {
+	background-color: black;
+   color: white;
+	
+}
+tr {
+	background-color: black;
+  color: white;
+	
+}
+td {
+	background-color: black;
+    color: white;
+	text-align: justify;
+	text-decoration-line: underline;
+    text-decoration-style: solid;
+	
+}
+Div {
+  border: 5px outset orange;
+  background-color: orange;
+  text-align: center;
+}
