@@ -10,6 +10,11 @@ body * {
    padding:0;
 }
 
+p {
+	color:#ffffff;
+}
+
+
 /* HTML Nav Styles */
 #nav {
 list-style:none inside;
